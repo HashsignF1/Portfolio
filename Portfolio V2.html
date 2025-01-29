@@ -1,0 +1,1378 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hashsign's Portfolio</title>
+  <style>
+    :root {
+      --bg-light: #bebebe;
+      --text-light: #333;
+      --bg-dark: #000000;
+      --text-dark: #f9f9f9;
+    }
+
+    body.light-theme {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    body.dark-theme {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: var(--bg-light);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .header .logo img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .theme-toggle {
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: var(--text-light);
+      color: var(--bg-light);
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-theme .header {
+      background-color: var(--bg-dark);
+    }
+
+    body.dark-theme .theme-toggle {
+      background-color: var(--text-dark);
+      color: var(--bg-dark);
+    }
+
+    @media (max-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+  }
+}
+
+  </style>
+</head>
+<body class="light-theme">
+  <header class="header">
+    <div class="logo">
+      <img src="C:\Users\91701\Downloads\file.png" alt="Logo">
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#experience">Professional Experience</a></li>
+        <li><a href="#certifications">Certifications & Stats</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#references">References</a></li>
+        <li><a href="#contact">Contact Form</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle rounded-lg">Toggle Theme</button>
+  </header>
+
+  <script>
+    document.querySelector('.theme-toggle').addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      document.body.classList.toggle('light-theme');
+    });
+  </script>
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  /* Additional custom styles */
+  .home-section {
+    background-color: #bebebe;
+    color: rgb(0, 0, 0);
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  /* For the animations */
+  .lottie-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Aligning the container */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+    /* Section Styling */
+    .project-section {
+      position: relative;
+      width: 90%;
+      margin: 0 auto;
+      padding: 8rem 0;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    /* Background Video */
+    .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.5; /* Optional: To dim the video */
+      animation: fadeIn 10s ease-in-out infinite;
+    }
+
+    /* Animation for video */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-card {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+
+    .group:hover .group-hover\:opacity-100 {
+      opacity: 1;
+    }
+
+    .group-hover\:opacity-100 {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+</style>
+</head>
+
+<body class="bg-white text-black">
+
+<section id="home" class="flex flex-col lg:flex-row p-4 home-section">
+  <!-- Left Side -->
+  <div class="w-full lg:w-3/5 ml-8 mb-8 lg:mb-0">
+    <h1 class="text-5xl font-bold tracking-wide">
+      Hash <span class="text-green-500">Sign</span>
+    </h1>
+    <p class="mt-4 text-lg text-black">
+      Hello! I’m Harjot Singh (a.k.a. Hash Sign), a finance graduate passionate about quantitative trading and portfolio management. With a CGPA of 9.39, I’ve built a solid foundation in financial analysis and quantitative projects, blending data skills with a drive for tech-powered investment strategies. Currently, I’m focused on a career in asset management, with the ultimate goal of managing my own hedge fund. Committed to continuous learning and growth, I’m excited to make my mark in the fast-paced world of finance.
+    </p>
+
+    <div class="mt-6 flex space-x-6">
+        <button class="bg-purple-900 text-white px-4 py-2 rounded-lg hover:bg-gray-300 transition duration-200 ease-in-out"> <!-- Calendly link widget -->
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+      <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/harjotsinghbumbrah?background_color=000000&text_color=ffffff&primary_color=46ff5c'});return false" class="text-white hover:underline">
+        Schedule Time with Me
+        </button>
+      </a>
+
+      <!-- Resume Download -->
+      <a href="C:\Users\91701\OneDrive\Desktop\Profile stuff\harjot singh cv Final.docx" download>
+        <button class="bg-green-900 text-white px-4 py-2 rounded-lg hover:bg-gray-300 transition duration-200 ease-in-out">
+          My Resume
+        </button>
+      </a>
+    </div>
+
+    <div class="flex space-x-6 t-8" style="margin-top: 2rem; justify-content: ;">
+      <!-- My Top Skills Section -->
+      <div class="w-1/2 flex flex-col items-left">
+        <h2 class="text-xl font-semibold mb-4 justify-left">My Top Skills</h2>
+        <div class="flex space-x-6">
+          <a class="hover:opacity-80" title="Coding">
+            <img src="https://cdn.iconscout.com/icon/free/png-256/free-code-icon-download-in-svg-png-gif-file-formats--dev-beautiful-single-color-icons-pack-miscellaneous-460136.png?f=webp&w=256" alt="Skill 1" class="icon" style="width: 45px; height: 45px;">
+          </a>
+          <a class="hover:opacity-80" title="Excel">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Microsoft_Excel_2013-2019_logo.svg/1200px-Microsoft_Excel_2013-2019_logo.svg.png" alt="Skill 2" class="icon" style="width: 45px; height: 45px;">
+          </a>
+          <a class="hover:opacity-80" title="Quantitative Analysis">
+            <img src="https://cdn-icons-png.flaticon.com/512/3898/3898167.png" alt="Skill 3" class="icon" style="width: 45px; height: 45px;">
+          </a>
+        </div>
+      </div>
+    
+      <!-- Connect with Me Section -->
+      <div class="w-1/2 flex flex-col items-left">
+        <h2 class="text-xl font-semibold mb-4 justify-left">Connect with Me</h2>
+        <div class="flex space-x-6">
+          <a href="https://www.instagram.com/hashsignn" class="hover:opacity-80" title="Instagram">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" class="icon">
+          </a>
+          <a href="https://www.linkedin.com/in/hashsign" class="hover:opacity-80" title="LinkedIn">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu8pBeH_oRf2_gRydB1LAKc1cpojYZ990uiw&s" alt="LinkedIn" class="icon">
+          </a>
+          <a href="https://www.youtube.com/@Hashsignn" class="hover:opacity-80" title="YouTube">
+            <img src="https://cdn-icons-png.flaticon.com/512/270/270834.png" alt="YouTube" class="icon">
+          </a>
+          <a href="https://github.com/HashsignF1" class="hover:opacity-80" title="GitHub">
+            <img src="https://cdn.worldvectorlogo.com/logos/github-icon-2.svg" alt="GitHub" class="icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>    
+
+  <!-- Right Side (Animations) -->
+  <div class="w-full lg:w-2/5 flex items-center justify-right mt-8 lg:mt-0 lottie-container">
+    <!-- Animation Placeholder -->
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+    <dotlottie-player src="https://lottie.host/a9c59b0d-b3c7-428f-a230-1799518fbe53/Qd9DcHjl74.json" background="transparent" speed="1" style="width: 460px; height: 460px;" loop autoplay></dotlottie-player>
+  </div>
+</section>
+
+<script>
+  // JavaScript for Calendly Widget (already embedded)
+  window.onload = function() {
+    Calendly.initPopupWidget({url: 'https://calendly.com/harjotsinghbumbrah?background_color=000000&text_color=ffffff&primary_color=46ff5c'});
+  };
+</script>
+
+
+<section style="
+width: 90%; 
+margin: 50px auto; 
+padding: 20px; 
+background: linear-gradient(135deg, #1b461b, #22225a); 
+border-radius: 8px; 
+font-family: Arial, sans-serif; 
+color: #fff;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+
+<h2 style="
+  text-align: center; 
+  font-size: 2rem; 
+  margin-bottom: 20px; 
+  text-transform: uppercase; 
+  letter-spacing: 1.5px;
+  Color:var(--text-dark)">Work Experience</h2>
+
+<!-- <div class="experience" style="
+  margin-bottom: 15px; 
+  padding: 15px; 
+  border: 1px solid #fff; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  background: rgba(0, 0, 0, 0.3); 
+  transition: transform 0.3s ease, background 0.3s ease;" 
+  onclick="this.querySelector('.expanded-info').style.display = this.querySelector('.expanded-info').style.display === 'block' ? 'none' : 'block'">
+  
+  <p style="
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+    display: flex; 
+    align-items: center;">
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+    <dotlottie-player src="https://lottie.host/63112ea8-68a7-4d41-b53b-ce116d77ce52/S8GcU3rHKn.json" background="transparent" speed="1" style="width: 35px; height: 35px;" loop autoplay alt="Logo" style="margin-right: 10px; border-radius: 50%;"> </dotlottie-player>Portfolio Manager
+  </p>
+  <p style="
+    font-style: italic; 
+    color: #aaa;">ABC Investments, Singapore</p>
+  <p style="
+    font-size: 0.85rem; 
+    color: #ccc;">Jan 2021 - Present</p>
+  <div class="expanded-info" style="display: none; margin-top: 10px; font-size: 0.9rem; line-height: 1.6;">
+    <p>Managed diverse portfolios, increased client returns by 15%, and implemented quantitative investment strategies.</p>
+  </div>
+</div> -->
+
+<div class="experience" style="
+  margin-bottom: 15px; 
+  padding: 15px; 
+  border: 1px solid #fff; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  background: rgba(0, 0, 0, 0.3); 
+  transition: transform 0.3s ease, background 0.3s ease;" 
+  onclick="this.querySelector('.expanded-info').style.display = this.querySelector('.expanded-info').style.display === 'block' ? 'none' : 'block'">
+  
+  <p style="
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+    display: flex; 
+    align-items: center;">
+    <img src="C:\Users\91701\OneDrive\Desktop\Portfolio\1663089101673.jpg" alt="Logo" style="margin-right: 10px; border-radius: 50%; width: 35px; height: 35px;">Intern - CRE Financial Analyst 
+  </p>
+  <p style="
+  font-style: italic; 
+    color: #aaa;">Springer Capital</p>
+  <p style="
+    font-size: 0.85rem; 
+    color: #ccc;">Dec 2024 - Mar 2025</p>
+  <div class="expanded-info" style="display: none; margin-top: 10px; font-size: 0.9rem; line-height: 1.6;">
+    <p>Securing Grants for partnered consultancy firm(s) researching, filtering and storing data relevant to Real estate financing and development, FPOC to Investors/Brokers, preparation of Investment and loan decks.</p>
+  </div>
+</div>
+
+<div class="experience" style="
+  margin-bottom: 15px; 
+  padding: 15px; 
+  border: 1px solid #fff; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  background: rgba(0, 0, 0, 0.3); 
+  transition: transform 0.3s ease, background 0.3s ease;" 
+  onclick="this.querySelector('.expanded-info').style.display = this.querySelector('.expanded-info').style.display === 'block' ? 'none' : 'block'">
+  
+  <p style="
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+    display: flex; 
+    align-items: center;">
+    <img src="C:\Users\91701\OneDrive\Desktop\Portfolio\1630659324303.jpg" alt="Logo" style="margin-right: 10px; border-radius: 50%;  width: 35px; height: 35px;">Intern - Financial & Trading Analyst  
+  </p>
+  <p style="
+    font-style: italic; 
+    color: #aaa;">Margin Sentiments Advisorys Pvt Ltd</p>
+  <p style="
+    font-size: 0.85rem; 
+    color: #ccc;">Feb 2024 - May 2024</p>
+  <div class="expanded-info" style="display: none; margin-top: 10px; font-size: 0.9rem; line-height: 1.6;">
+    <p>Developed and back-tested trading strategies using technical indicators while analyzing market trends, observed client portfolios, prepared detailed reports, and tailored strategies to diversify risk.</p>
+  </div>
+</div>
+
+<div class="experience" style="
+  margin-bottom: 15px; 
+  padding: 15px; 
+  border: 1px solid #fff; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  background: rgba(0, 0, 0, 0.3); 
+  transition: transform 0.3s ease, background 0.3s ease;" 
+  onclick="this.querySelector('.expanded-info').style.display = this.querySelector('.expanded-info').style.display === 'block' ? 'none' : 'block'">
+  
+  <p style="
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+    display: flex; 
+    align-items: center;">
+    <img src="C:\Users\91701\OneDrive\Desktop\Portfolio\meliuscac_cover.jpg" alt="Logo" style="margin-right: 10px; border-radius: 50%;  width: 35px; height: 35px;">Senior Consultant
+  </p>
+  <p style="
+    font-style: italic; 
+    color: #aaa;">Melius - The Consultancy & Analytics society of MSI</p>
+  <p style="
+    font-size: 0.85rem; 
+    color: #ccc;">Jan 2023 - Jun 2024</p>
+  <div class="expanded-info" style="display: none; margin-top: 10px; font-size: 0.9rem; line-height: 1.6;">
+    <p>Led a team of 8 to to provide consultancy to an ed-tech startup, reaching 20,000+ users, and boosted school profitability by 30%. Secured INR 15 lakh CSR funding and managed logistics for 2 major inter-college events.</p>
+  </div>
+</div>
+
+</section>
+
+  <style>
+    /* Styling the "View More" Button */
+    .view-more-btn {
+      background-color: rgba(255, 255, 255, 0.708);
+      color: rgb(0, 0, 0);
+      padding: 0.2rem 0.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      display: inline-block;
+      margin-top: 1rem; 
+    }
+    
+    /* Glowing effect when clicked */
+    .view-more-btn:active {
+      box-shadow: 0 0 15px 5px rgba(139, 46, 216, 0.8);
+    }
+    
+    /* Hide by default */
+    .hidden {
+      display: none;
+    }
+  
+    /* Styling the full paragraph overlay */
+    .absolute {
+      position: absolute;
+    }
+  
+    .overflow-auto {
+      max-height: 100%;
+    }
+  </style>
+  
+  <script>
+    function toggleParagraph(id) {
+      const element = document.getElementById(id);
+      if (element.classList.contains('hidden')) {
+        element.classList.remove('hidden');
+      } else {
+        element.classList.add('hidden');
+      }
+    }
+  </script>
+  
+  <script>
+    function toggleParagraph(id) {
+      const element = document.getElementById(id);
+      if (element.classList.contains('hidden')) {
+        element.classList.remove('hidden');
+      } else {
+        element.classList.add('hidden');
+      }
+    }
+  </script>
+  
+ 
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+      /* General Section Styling */
+      .projects {
+        padding: 2rem;
+        max-width: 90%;
+        margin: 0 auto;
+      }
+  
+      h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+  
+      /* Project Grid Layout */
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+      }
+  
+      /* Project Item Styling */
+      .project-item {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s, background-color 0.3s;
+        background-color: #fff;
+      }
+  
+      .project-item:hover {
+        transform: scale(1.05);
+        background-color: #f5f5f5;
+      }
+  
+      /* Image and Project Content */
+      .project-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+  
+      .project-content {
+        padding: 1rem;
+      }
+  
+      .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+  
+      .project-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0;
+      }
+  
+      .project-tag {
+        font-size: 0.9rem;
+        background-color: #007bff;
+        color: #fff;
+        padding: 0.3rem 0.6rem;
+        border-radius: 4px;
+      }
+  
+      /* Details Section */
+      .project-details {
+        display: none;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #555;
+      }
+  
+      .project-item.expanded .project-details {
+        display: block;
+      }
+  
+      .view-code {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+  
+  <!-- Projects Section -->
+  <section class="projects" id="projects p-24">
+    <h2>Projects</h2>
+  
+    <div class="project-grid">
+      <!-- Project 1 -->
+     <div class="project-item" onclick="toggleProjectDetails(this)"> 
+        <img src="C:\Users\91701\OneDrive\Desktop\Portfolio\Screenshot 2024-12-04 081425.png" alt="Project Image 1" class="project-image">
+        <div class="project-content">
+          <div class="project-header">
+            <h3 class="project-title">Indian Stocks Portfolio Pie adjusted of Unsystematic Risk</h3>
+            <span class="project-tag">Python</span>
+          </div>
+          <div class="project-details">
+            <p>Unsystematic Risk adjusted weighted-portfolio creation using efficient frontier, performance measures like Sharpe,  Jenson, and Treynor measures while forecasting profit distribution and VaR using Monte Carlo Simulation. resulting in a 41% max return for a window of 252 trading days</p>
+            <a href="https://github.com/your-repo" target="_blank" class="view-code">View Code</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project 2 -->
+      <div class="project-item" onclick="toggleProjectDetails(this)">
+        <img src="C:\Users\91701\OneDrive\Desktop\Portfolio\Screenshot 2024-12-04 083357.png" alt="Project Image 2" class="project-image">
+        <div class="project-content">
+          <div class="project-header">
+            <h3 class="project-title">Bitcoin Price Forecast using LSTM Model</h3>
+            <span class="project-tag">Python</span>
+          </div>
+          <div class="project-details">
+            <p>Forecasted Bitcoin price amidst volatility using the LSTM Model in Python for a trading window of 45 days, achieved model accuracy of 70% in back-testing.</p>
+            <a href="https://github.com/your-repo" target="_blank" class="view-code">View Code</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project 3 -->
+      <div class="project-item" onclick="toggleProjectDetails(this)">
+        <img src="https://via.placeholder.com/400x200" alt="Upcoming" class="project-image">
+        <div class="project-content">
+          <div class="project-header">
+            <h3 class="project-title">Binomial Asset Pricing Model</h3>
+            <span class="project-tag">Python</span>
+          </div>
+          <div class="project-details">
+            <p></p>
+            <a href="https://github.com/your-repo" target="_blank" class="view-code">View Code</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project 4 -->
+      <div class="project-item" onclick="toggleProjectDetails(this)">
+        <img src="https://via.placeholder.com/400x200" alt="Upcoming" class="project-image">
+        <div class="project-content">
+          <div class="project-header">
+            <h3 class="project-title">Topological Evaluation of options risks</h3>
+            <span class="project-tag">Mathematics</span>
+          </div>
+          <div class="project-details">
+            <p></p>
+            <a href="https://github.com/your-repo" target="_blank" class="view-code">View Code</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  
+  <script>
+    function toggleProjectDetails(projectItem) {
+      projectItem.classList.toggle('expanded');
+    }
+  </script>
+  
+  <section id="certifications" class="p-24">
+    <div class="flex">
+      <!-- Leetcode Stats Section -->
+      <div class="w-1/3">
+        <h2 class="text-2xl font-bold text-black">Leetcode Stats</h2>
+        <img src="https://leetcard.jacoblin.cool/HashSign?theme=light&font=Jaldi&ext=heatmap" 
+             alt="LeetCode Heatmap" 
+             class="w-full h-auto mb-4">
+        <img src="https://github-readme-stats.vercel.app/api?username=HashsignF1&theme=vue&show_icons=true" 
+             alt="Leetcode Stats" 
+             class="w-full h-auto mb-4">
+      </div>
+  
+     
+     <!-- Certifications Section -->
+     <div class="w-2/3 pl-8">
+      <h2 class="text-2xl font-bold text-black">Certifications</h2><!-- Achieved Certifications -->
+      <div class="w-full mt-4">
+        <h3 class="text-xl font-semibold">Achieved Certifications</h3>
+        <div class="certification-item" onclick="toggleCertificationDetails(this)">
+          <div class="certification-header">
+            <!-- Certification Logo -->
+            <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/XDP/XDP~COURSE!~python-crash-course/XDP~COURSE!~python-crash-course.jpeg" alt="CFA Logo" class="w-12 h-12 mr-4">
+            <h3 class="certification-title">Google: Crash Course in Python</h3>
+            <span class="certification-badge">January 2025</span>
+          </div>
+          <div class="certification-details">
+            <p></p>
+          </div>
+        </div>
+
+        <div class="certification-item">
+          <div class="certification-header">
+            <!-- Certification Logo -->
+            <img src="data:image/png;base64,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" alt="FRM Part 2 Logo" class="w-12 h-12 mr-4">
+            <h3 class="certification-title">Mathematics for Machine Learning & Data Science</h3>
+            <span class="certification-badge">2024</span>
+          </div>
+          <div class="certification-details">
+            <p>Preparing for FRM Part 2, focusing on risk management strategies and credit risk measurement.</p>
+          </div>
+        </div>
+
+        <div class="certification-item" onclick="toggleCertificationDetails(this)">
+          <div class="certification-header">
+            <!-- Certification Logo -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWloJGyrX7ADZo8zvzKYrh_sOeg961ArCF-Q&s" alt="CFA Logo" class="w-12 h-12 mr-4">
+            <h3 class="certification-title">GRE General Test</h3>
+            <span class="certification-badge">December 2024</span>
+          </div>
+          <div class="certification-details">
+            <p></p>
+          </div>
+        </div>
+
+        <div class="certification-item" onclick="toggleCertificationDetails(this)">
+          <div class="certification-header">
+            <!-- Certification Logo -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxS1BsAyugAuw0gnPDh084eDrTkA59oXRVbA&s" alt="CFA Logo" class="w-12 h-12 mr-4">
+            <h3 class="certification-title justify-content">IELTS Academic</h3>
+            <span class="certification-badge">July 2024</span>
+          </div>
+          <div class="certification-details">
+            <p><B>Listening: 9 Speaking: 7.5 Writing: 7.5 Reading: 9 Overall: 8.5/9</B></p>
+          </div>
+        </div>
+       </div> 
+  
+                
+                <div class="w-full mt-8">
+                  <h3 class="text-xl font-semibold">Upcoming Certifications</h3>
+                  <div class="certification-item">
+                    <div class="certification-header">
+                      <!-- Certification Logo -->
+                      <img src="data:image/jpeg;base64,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" alt="CFA Level 2 Logo" class="w-12 h-12 mr-4">
+                      <h3 class="certification-title">Deep Learning Specialization</h3>
+                      <span class="certification-badge">Planned for 2024</span>
+                    </div>
+                    <div class="certification-details">
+                      <p>
+                        Hyperparameter Tuning, Regularization and Optimization, Structuring Machine Learning Projects, Convolutional Neural Network, Sequence Models</p>
+                    </div>
+                  </div>
+        
+                  
+                  <div class="certification-item" onclick="toggleCertificationDetails(this)">
+                    <div class="certification-header">
+                      <!-- Certification Logo -->
+                      <img src="https://yt3.googleusercontent.com/ytc/AIdro_ni4mmp6vq0HHyPP7J0JxiZGa-Jfp3PPfM5bvQArv9sYQ=s900-c-k-c0x00ffffff-no-rj" alt="CFA Logo" class="w-12 h-12 mr-4">
+                      <h3 class="certification-title">Chartered Quantitative Finance</h3>
+                      <span class="certification-badge">2023</span>
+                    </div>
+                    <div class="certification-details">
+                      <p></p>
+                    </div>
+                  </div>
+      
+                  <div class="certification-item" onclick="toggleCertificationDetails(this)">
+                    <div class="certification-header">
+                      <!-- Certification Logo -->
+                      <img src="https://images.credly.com/images/b790eb12-ecb3-4b94-89be-61aa40c92e7c/image.png" alt="Python for Financial Analysis Logo" class="w-12 h-12 mr-4">
+                      <h3 class="certification-title">Python for Financial Analysis</h3>
+                      <span class="certification-badge">2022</span>
+                    </div>
+                    <div class="certification-details">
+                      <p></p>
+                    </div>
+                  </div> 
+      
+                  <div class="certification-item" onclick="toggleCertificationDetails(this)">
+                    <div class="certification-header">
+                      <!-- Certification Logo --->
+                      <img src="https://www.garp.org/hubfs/Portal/Certificates/certifiedFRM.png" alt="FRM Logo" class="w-12 h-12 mr-4">
+                      <h3 class="certification-title">FRM Part 1</h3>
+                      <span class="certification-badge">2021</span>
+                    </div>
+                    <div class="certification-details">
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+              </div>    
+              </div>
+
+              
+      <style>
+        .certifications {
+          padding: 3rem;
+          max-width: 600px;
+          margin: 0 auto;
+        }
+        
+        .certification-item {
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          padding: 1rem;
+          margin-bottom: 1.5rem;
+          transition: transform 0.3s, background-color 0.3s;
+          cursor: pointer;
+        }
+        
+        .certification-item:hover {
+          transform: scale(1.02);
+          background-color: #f5f5f5;
+        }
+        
+        .certification-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        
+        .certification-title {
+          font-size: 1.1rem;
+          font-weight: bold;
+          margin: 0;
+        }
+        
+        .certification-details {
+          display: none;
+          margin-top: 1rem;
+          font-size: 0.9rem;
+          color: #555;
+        }
+        
+        .certification-item.expanded .certification-details {
+          display: block;
+        }
+        
+        .certification-badge {
+          background-color: #28a745;
+          color: #fff;
+          padding: 0.3rem 0.6rem;
+          border-radius: 4px;
+          font-size: 0.8rem;
+        }
+      </style>
+    <script>
+    function toggleCertificationDetails(element) {
+      element.classList.toggle('expanded');
+    }
+    </script>
+  </section>
+
+  
+<section class="skills-section" id="skills">
+  <h2 class="skills-title">Skills</h2>
+
+  <div class="skills-grid">
+    <!-- Skill 1 -->
+    <div class="skill-item">
+      <div class="skill-media">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq0Pw0WiD1CJI4ZKFwmjP9uaatqk5ICQSglA&s" alt="Python" />
+      </div>
+      <div class="skill-content">
+        <h3> Programming Proficiency</h3>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width: 10%;"></div>
+        </div>
+        <span class="skill-percentage">5%</span>
+      </div>
+    </div>
+
+    <!-- Skill 2 -->
+    <div class="skill-item">
+      <div class="skill-media">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHM_CoW4bvRmaDACxbyYpjcQkhkX1hOfDaBw&s" alt="Python" />
+      </div>
+      <div class="skill-content">
+        <h3>Mathematical and Statistical Expertise        </h3>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width: 5%;"></div>
+        </div>
+        <span class="skill-percentage">5%</span>
+      </div>
+    </div>
+
+    <!-- Skill 3 -->
+    <div class="skill-item">
+      <div class="skill-media">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Black-Scholes_surface_plot_with_random_paths.svg" alt="Portfolio Management" />
+      </div>
+      <div class="skill-content">
+        <h3>Data Analysis and Visualization</h3>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width: 50%;"></div>
+        </div>
+        <span class="skill-percentage">50%</span>
+      </div>
+    </div>
+
+    <!-- Skill 4 -->
+    <div class="skill-item">
+      <div class="skill-media">
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+        <dotlottie-player src="https://lottie.host/698ba59d-f220-474a-99a0-89bed214f432/lD6kLr7hUi.lottie" background="transparent" speed="1" style="width: 100px; height: 100px" loop autoplay></dotlottie-player>
+      </div>
+      <div class="skill-content">
+        <h3>Machine Learning for Finance
+        </h3>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width: 5%;"></div>
+        </div>
+        <span class="skill-percentage">5%</span>
+      </div>
+    </div>
+  
+     <!-- Skill 1 -->
+     <div class="skill-item">
+      <div class="skill-media">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Microsoft_Excel_2013-2019_logo.svg/1200px-Microsoft_Excel_2013-2019_logo.svg.png" alt="Python" />
+      </div>
+      <div class="skill-content">
+        <h3>Financial Modeling and Valuation</h3>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width: 70%;"></div>
+        </div>
+        <span class="skill-percentage">70%</span>
+      </div>
+    </div>
+
+    <!-- Skill 2 -->
+    <div class="skill-item">
+      <div class="skill-media">
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+        <dotlottie-player src="https://lottie.host/9222508b-b0eb-4ce8-82b7-01c5ff9fa49d/Bnm9uK6x9E.lottie"  background="transparent" speed="1" style="width: 100x; height: 100px;" loop autoplay></dotlottie-player>
+      </div>
+      <div class="skill-content">
+        <h3>Market Making(for now theoretical)</h3>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width: 30%;"></div>
+        </div>
+        <span class="skill-percentage">30%</span>
+      </div>
+    </div>
+
+    <!-- Skill 3 -->
+    <div class="skill-item">
+      <div class="skill-media">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVSMTj6JTtosfSVFH8S96_EID-ExWay3ncaA&s" alt="Portfolio Management" />
+      </div>
+      <div class="skill-content">
+        <h3>Domain Specific Knowledge</h3>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width: 80%;"></div>
+        </div>
+        <span class="skill-percentage">80%</span>
+      </div>
+    </div>
+
+    <!-- Skill 4 -->
+    <div class="skill-item">
+      <div class="skill-media">
+       <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlfaWsqOmsGpyKbi0fAUaQMi_IfSIaK3KzhQ&s" alt = "Mental Math"></image>
+      </div>
+      <div class="skill-content">
+        <h3>Mental Maths</h3>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width: 20%;"></div>
+        </div>
+        <span class="skill-percentage">20%</span>
+      </div>
+    </div>
+    </div>
+</section>
+
+<style>
+  .skills-section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .skills-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .skill-item {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+
+  .skill-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .skill-media {
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+
+  .skill-media img,
+  .skill-media dotlottie-player {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .skill-content {
+    flex-grow: 1;
+  }
+
+  .skill-content h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .skill-bar {
+    position: relative;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+    overflow: hidden;
+  }
+
+  .skill-bar-fill {
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 4px;
+    transition: width 0.5s ease-in-out;
+  }
+
+  .skill-percentage {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #555;
+    display: block;
+    text-align: right;
+  }
+</style>
+
+<script>
+  // Animate skill bars on load
+  window.addEventListener('load', () => {
+    const skillBars = document.querySelectorAll('.skill-bar-fill');
+    skillBars.forEach(bar => {
+      const width = bar.style.width;
+      bar.style.width = '0%';
+      setTimeout(() => {
+        bar.style.width = width;
+      }, 200);
+    });
+  });
+</script>
+
+<!--
+<section class="linkedin-references" id="references">
+  <h2 class="references-title">LinkedIn References</h2>
+
+  <div class="references-grid">
+    <!-- Example Reference Item 
+    <div class="reference-item">
+      <div class="reference-header">
+        <img src="path-to-profile-picture.jpg" alt="Profile Picture" class="reference-img" />
+        <div>
+          <h3 class="reference-name">John Doe</h3>
+          <p class="reference-role">Senior Manager at XYZ Corp</p>
+        </div>
+      </div>
+      <p class="reference-text">
+        "Working with you was an absolute pleasure! Your exceptional skills in quantitative modeling and portfolio management made a significant impact on our team."
+      </p>
+    </div>
+
+    <!-- More reference items can be added dynamically 
+  </div>
+</section>
+
+<style>
+  .linkedin-references {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .references-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+
+  .references-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .reference-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+
+  .reference-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .reference-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .reference-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    object-fit: cover;
+  }
+
+  .reference-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .reference-role {
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  .reference-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+  }
+</style>
+
+<script>
+  // Dynamic Reference Loading
+  const referencesData = [
+    {
+      name: "John Doe",
+      role: "Senior Manager at XYZ Corp",
+      profileImg: "path-to-john-image.jpg",
+      text: "Working with you was an absolute pleasure! Your exceptional skills in quantitative modeling and portfolio management made a significant impact on our team."
+    },
+    {
+      name: "Jane Smith",
+      role: "CEO at ABC Inc",
+      profileImg: "path-to-jane-image.jpg",
+      text: "Your professionalism and expertise in Python and machine learning are unmatched. Highly recommended!"
+    }
+    // Add more references here
+  ];
+
+  const referencesGrid = document.querySelector('.references-grid');
+
+  referencesData.forEach(ref => {
+    const referenceItem = document.createElement('div');
+    referenceItem.classList.add('reference-item');
+    referenceItem.innerHTML = `
+      <div class="reference-header">
+        <img src="${ref.profileImg}" alt="${ref.name}" class="reference-img" />
+        <div>
+          <h3 class="reference-name">${ref.name}</h3>
+          <p class="reference-role">${ref.role}</p>
+        </div>
+      </div>
+      <p class="reference-text">${ref.text}</p>
+    `;
+    referencesGrid.appendChild(referenceItem);
+  });
+</script> -->
+ 
+<section id="contact" class="p-8 flex">
+  <style>
+    .contact-form {
+      padding: 2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-form h2 {
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #464646;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      height: 150px;
+    }
+
+    .contact-btn {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .contact-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+  
+        <dotlottie-player src="https://lottie.host/9e50cd8d-40b0-4aef-9915-1d02223510f3/8ZqHjN1XLL.json" background="transparent" speed="1" style="width: 450px; height: 450px;" loop autoplay></dotlottie-player>
+      
+        </div align = center>
+        <div class="w-2/3 p-6 rounded">
+    <h2>Contact Me</h2>
+    <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+      </div>
+
+      <button type="submit" class="contact-btn">Send Message</button>
+    </form>
+  </section>
+
+  <<footer>
+    <div class="footer-container">
+      <!-- About Me Section -->
+      <div class="footer-section">
+        <h3>About Me</h3>
+        <p>
+          Aspiring quant and financial expert driven by data, innovation, and impactful decision-making.
+        </p>
+      </div>
+  
+      <!-- Quick Links Section -->
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#professional-experience">Professional Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#references">References</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </div>
+  
+      <!-- Follow Me Section -->
+      <div class="footer-section">
+        <h3>Follow Me</h3>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/your-profile" target="_blank" aria-label="GitHub" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://twitter.com/your-profile" target="_blank" aria-label="Twitter" class="social-icon">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="mailto:your-email@example.com" aria-label="Email" class="social-icon">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      &copy; 2024 Your Name. All rights reserved.
+    </div>
+  </footer>
+  <style>
+    footer {
+      background-color: #0e0e0e;
+      color: #fff;
+      padding: 2rem 1rem;
+      font-size: 1rem;
+    }
+  
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .footer-section {
+      flex: 1;
+      min-width: 250px;
+    }
+  
+    .footer-section h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: #f9f9f9;
+    }
+  
+    .footer-section p {
+      line-height: 1.6;
+      color: #aaa;
+    }
+  
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+  
+    .footer-section ul li {
+      margin: 0.5rem 0;
+    }
+  
+    .footer-section ul li a {
+      text-decoration: none;
+      color: #ddd;
+      transition: color 0.3s;
+    }
+  
+    .footer-section ul li a:hover {
+      color: #19562d;
+    }
+  
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+  
+    .social-icon {
+      color: #ddd;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+  
+    .social-icon:hover {
+      color: #482044;
+    }
+  
+    .footer-bottom {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+  
+</body>
+</html>
